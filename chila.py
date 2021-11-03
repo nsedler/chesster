@@ -1,11 +1,15 @@
 import berserk
+import os
+from dotenv import load_dotenv, find_dotenv
 
 from pprint import pprint
 
+load_dotenv(find_dotenv())
+
 class Chila():
 
-    def __init__(self, token: str) -> None:
-        self.token = token
+    def __init__(self) -> None:
+        self.token = os.environ.get("lilaToken")
         self.session = berserk.TokenSession(self.token)
         self.client = berserk.Client(session=self.session)
         

@@ -1,5 +1,12 @@
+import dotenv
 import chesster
+import os
+from dotenv import load_dotenv, find_dotenv
+
 
 if __name__ == '__main__':
+    
+    load_dotenv(find_dotenv())
+
     chesster = chesster.Bot()
-    chesster.run('ODgzNzY3MDY5MTk4Mzg5MzEw.YTOuOA.iaWiHyAJng1v2Cp6XTz7-cUOq8o')
+    chesster.run(os.environ.get('botToken'))

@@ -9,7 +9,7 @@ class perfSearch(command.Command):
         super().__init__(name="search", help="Search for a users rating")
 
     async def execute(self, msg: discord.message.Message):
-        chilaObj = chila.Chila('lip_YoSUJI8ZXAB3kc4GkUwU')
+        chilaObj = chila.Chila()
         msgArgs = msg.content.split(' ')
 
         if await chilaObj.isUser(msgArgs[1]) == False:

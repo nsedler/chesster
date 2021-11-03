@@ -8,7 +8,7 @@ class compare(command.Command):
         super().__init__(name="compare", help="Compare a record between 2 players")
 
     async def execute(self, msg: discord.message.Message):
-        chilaObj = chila.Chila('lip_YoSUJI8ZXAB3kc4GkUwU')
+        chilaObj = chila.Chila()
         userNames = msg.content.split(' ')
 
         await chilaObj.getUserRating('nsedler')
